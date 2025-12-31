@@ -162,7 +162,7 @@ header {
     justify-content: flex-end;
     position: relative;
     z-index: 1;
-    transform: translateX(-50px);
+    transform: translateX(-45px);
 }
 
 
@@ -183,13 +183,119 @@ header {
     z-index: 2;
 }
 
+.text-underline {
+    position: relative;
+}
+
+.text-underline::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    background-color: var(--clr-accent);
+    width: 100%;
+}
 
 .content_description {
     font-size: var(--fs-400);
+    margin-top: 43px;
     max-width: 445px;
+    color: var(--clr-muted);
+    }
+    
+    .btn {
+        width: max-content;
+        text-decoration: none;
+        color: var(--clr-white);
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 2.6;
+        letter-spacing: 2.29px;
+        margin-top: 66px;
+        position: relative;
+    }
+    
+    .btn:hover {
+        color: var(--clr-accent);
+    }
+    
+    .btn::after {
+        content: "";
+        width: 100%;
+        background-color: var(--clr-accent);
+        position: absolute;
+        height: 2px;
+        left: 0;
+        bottom: 0;
 }
 
+.skills .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: 2px solid var(--clr-muted);
+    margin-top: 104px;
+    padding-top: 72px;
+    gap: 30px;
+}
+
+    
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.skills_title {
+    font-size: var(--fs-700);
+    line-height: var(--lh-700);
+    letter-spacing: var(--ls-700);
+}
+
+.skills_experience {
+    font-size: var(--fs-400);
+    color: var(--clr-muted);
+}
+
+.projects_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects .container {
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
+
+    .item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 14px;
+}
+
+     .skills .container {
+        grid-template-columns: 1fr;
+        padding-top: 48px;
+        margin-top: 72px;
+        justify-items: center;
+        align-items: center;
+    }
 
     .navbar {
         flex-direction: column;
