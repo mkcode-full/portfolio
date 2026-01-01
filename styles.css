@@ -265,9 +265,33 @@ header {
 }
 
 .projects .container {
-    margin-top: 50px;
+    margin-top: 140px;
 }
 
+.projects_title {
+    font-size: var(--fs-900);
+    color: var(--clr-white);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 540px;
+    overflow: hidden;
+}
+
+.card_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.projects-img {
+    width: 100%;
+    display: block;
+}
 
 
 
@@ -354,6 +378,22 @@ header {
         position: relative;
         z-index: 2;
     }
+
+    .card_wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 60px;
+        justify-items: center;
+    }
+
+ .projects-img {
+    max-width: 300px;
+ }
+
+.projects_title {
+    font-size: var(--fs-400);
+    color: var(--clr-white);
+}
 
 
 }
